@@ -9,15 +9,10 @@
 
     SELECT `name`,`lastname`,`date_of_birth`
     FROM `ospiti`
-    WHERE `date_of_birth` > '1998-12-31';
+    WHERE `date_of_birth` > '1987-12-31';
 
 3.  Seleziona tutti gli ospiti che hanno più di 20 anni
     (al momento dell’esecuzione della query)
-
-    SELECT `name`, `lastname`, `date_of_birth`
-    FROM `ospiti`
-    WHERE TIMESTAMPDIFF(YEAR, date_of_birth,CURRENT_DATE) > 20;
-
 
     SELECT `name`, `lastname`, `date_of_birth`
     FROM `ospiti`
