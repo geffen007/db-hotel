@@ -1,0 +1,16 @@
+SELECT ospiti.*
+FROM `ospiti`
+INNER JOIN `prenotazioni_has_ospiti`
+ON ospiti.id = prenotazioni_has_ospiti.ospite_id
+INNER JOIN `prenotazioni`
+ON prenotazioni.id = prenotazioni_has_ospiti.prenotazione_id
+WHERE MONTH(prenotazioni.created_at) = 5
+
+
+SELECT ospiti.name, ospiti.lastname, prenotazioni.id
+FROM `ospiti`
+INNER JOIN `prenotazioni_has_ospiti`
+ON ospiti.id = prenotazioni_has_ospiti.ospite_id
+INNER JOIN `prenotazioni`
+ON prenotazioni.id = prenotazioni_has_ospiti.prenotazione_id
+WHERE `lastname` LIKE 'b%'
